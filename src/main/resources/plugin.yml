@@ -1,0 +1,15 @@
+name: HiddenDeathMessages
+version: 1.0.2
+main: com.fizzysmp.hiddenmessages.HiddenDeathMessages
+api-version: '1.21.11'
+description: Suppress death broadcasts involving invisible or vanished players.
+softdepend: [AdvancedVanish, CombatGuard]
+commands:
+  hiddenmessages:
+    description: Toggle invisible-name death message protection
+    usage: /hiddenmessages <on|off|status>
+permissions:
+  hiddenmessages.admin:
+    default: op
+
+
