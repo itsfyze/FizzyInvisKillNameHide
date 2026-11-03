@@ -11,6 +11,7 @@ dependencies {
 java { toolchain.languageVersion.set(JavaLanguageVersion.of(21)) }
 val rulesCheck by tasks.registering(JavaExec::class) {
     dependsOn(tasks.testClasses)
+    doFirst { file("test-output").mkdirs() }
     classpath = sourceSets.test.get().runtimeClasspath
     mainClass.set("com.fizzysmp.hiddenmessages.RulesTest")
 }
